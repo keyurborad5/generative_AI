@@ -7,3 +7,7 @@ tokenizer = get_tokenizer("basic_english")
 # get_tokenizer (which is a function ) returns a callable function (here named tokenizer)
 # This tokenizer function can be used to tokenize text
 tokenizer("This is a sample text for tokenization.")
+
+def yield_tokens(data_iter):
+    for text in data_iter:
+        yield tokenizer(text)
